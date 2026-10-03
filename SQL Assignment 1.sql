@@ -2,15 +2,16 @@ CREATE DATABASE CompanyDB;
 USE CompanyDB;
 
 CREATE TABLE employees(
-	emp_id     INT PRIMARY KEY AUTO_INCREMENT,
+	emp_id     INT AUTO_INCREMENT,
     first_name VARCHAR(50)   NOT NULL,
     last_name  VARCHAR(50)   NOT NULL,
     email      VARCHAR(100)  UNIQUE NOT NULL,
     phone      VARCHAR(15)   NOT NULL,
     hire_date  DATE          NOT NULL,
     salary     DECIMAL(10,2) NOT NULL,
-    department VARCHAR(50)   NOT NULL
-    );
+    department VARCHAR(50)   NOT NULL,
+    PRIMARY KEY(emp_id)
+	);
 
 
 INSERT INTO employees VALUES
